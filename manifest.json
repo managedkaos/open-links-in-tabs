@@ -1,0 +1,76 @@
+{
+    // Required
+    "manifest_version": 2,
+    "name": "OLIT",
+    "version": "2013.9",
+
+    "description": "Open Links in Tabs - URLs listed in a form are opened in tabs.",
+    "icons": { 
+        "16":  "folder-blue-16.png",
+        "48":  "folder-blue-48.png",
+        "128": "folder-blue-128.png" 
+    },
+    
+    "browser_action": {
+        "default_title": "OLIT",
+        "default_popup": "popup.html"
+    },
+
+    "permissions": [
+        "tabs",
+        "storage"
+     ],
+
+    // Optional
+    "author": "Managed Kaos"
+
+/*
+    "background": {
+        // Recommended
+        "persistent": false
+    },
+    "background_page": ...,
+    "chrome_url_overrides": {...},
+    "commands": ...,
+    "content_pack": ...,
+    "content_scripts": {...},
+    "content_security_policy": "policyString",
+    "converted_from_user_script": ...,
+    "current_locale": ...,
+    "devtools_page": ...,
+    "externally_connectable": {
+        "matches": ["*://*.example.com/*"]
+    },
+    "file_browser_handlers": [...],
+    "homepage_url": "http://path/to/homepage",
+    "import": ...,
+    "incognito": "spanning or split",
+    "input_components": ...,
+    "key": "publicKey",
+    "minimum_chrome_version": "versionString",
+    "nacl_modules": [...],
+    "oauth2": ...,
+    "offline_enabled": true,
+    "omnibox": {
+        "keyword": "aString"
+    },
+    "optional_permissions": ...,
+    "options_page": "aFile.html",
+    "page_actions": ...,
+    "platforms": ...,
+    "plugins": [...],
+    "requirements": {...},
+    "sandbox": [...],
+    "script_badge": ...,
+    "short_name": ...,
+    "signature": ...,
+    "spellcheck": ...,
+    "storage": {
+        "managed_schema": ...
+    },
+    "system_indicator": ...,
+    "tts_engine": ...,
+    "update_url": "http://path/to/updateInfo.xml",
+    "web_accessible_resources": [...]
+*/
+}

@@ -1,4 +1,4 @@
 olit
 ====
 
-Open Links in Tabs - A Chrome extension that takes URLs pasted in a form and opens them in tabs.
+Open Links in Tabs - URLs listed in a form are opened in tabs.
