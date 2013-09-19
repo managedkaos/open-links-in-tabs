@@ -1,0 +1,8 @@
+http://google.com
+http://yahoo.com
+http://altavista.com
+http://aa.com
+http://delta.com
+badlink
+http://go.com
+badlink with and empty line below
