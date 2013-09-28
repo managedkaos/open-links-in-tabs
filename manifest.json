@@ -1,8 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Open Links in Tabs",
-    "short_name": "Open Links in Tabs",    
-    "version": "2013.09",
+    "version": "2013.9",
     "author": "Managed Kaos",
     "homepage_url": "http://managedkaos.com/open-links-in-tabs-a-chrome-extension/",
     "description": "URLs entered in a form are opened in tabs.",
