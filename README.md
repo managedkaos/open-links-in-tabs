@@ -1,4 +1,4 @@
 olit
 ====
 
-Open Links in Tabs - URLs listed in a form are opened in tabs.
+Open Links in Tabs - URLs entered in a form are opened in tabs..

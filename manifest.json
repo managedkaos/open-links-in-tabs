@@ -1,16 +1,39 @@
-{
-    // Required
-    "manifest_version": 2,
-    "name": "OLIT",
-    "version": "2013.9",
+// the mit license (mit)
+//
+// copyright (c) 2013 Managed Kaos
+//
+// permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "software"), to deal
+// in the software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the software, and to permit persons to whom the software is
+// furnished to do so, subject to the following conditions:
+//
+// the above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the software.
+//
+// the software is provided "as is", without warranty of any kind, express or
+// implied, including but not limited to the warranties of merchantability,
+// fitness for a particular purpose and noninfringement. in no event shall the
+// authors or copyright holders be liable for any claim, damages or other
+// liability, whether in an action of contract, tort or otherwise, arising from,
+// out of or in connection with the software or the use or other dealings in
+// the software.
 
-    "description": "Open Links in Tabs - URLs listed in a form are opened in tabs.",
+
+{
+    "manifest_version": 2,
+    "name": "Open Links in Tabs",
+    "short_name": "Open Links in Tabs",    
+    "version": "2013.09",
+    "author": "Managed Kaos",
+    "homepage_url": "http://managedkaos.com/open-links-in-tabs-a-chrome-extension/"
+    "description": "URLs entered in a form are opened in tabs.",
     "icons": { 
         "16":  "folder-blue-16.png",
         "48":  "folder-blue-48.png",
         "128": "folder-blue-128.png" 
     },
-    
     "browser_action": {
         "default_icon" : {
             "19" : "folder-blue-16.png",
@@ -19,62 +42,8 @@
         "default_title": "Open Links in Tabs",
         "default_popup": "popup.html"
     },
-
     "permissions": [
         "tabs",
         "storage"
-     ],
-
-    // Optional
-    "author": "Managed Kaos"
-
-/*
-    "background": {
-        // Recommended
-        "persistent": false
-    },
-    "background_page": ...,
-    "chrome_url_overrides": {...},
-    "commands": ...,
-    "content_pack": ...,
-    "content_scripts": {...},
-    "content_security_policy": "policyString",
-    "converted_from_user_script": ...,
-    "current_locale": ...,
-    "devtools_page": ...,
-    "externally_connectable": {
-        "matches": ["*://*.example.com/*"]
-    },
-    "file_browser_handlers": [...],
-    "homepage_url": "http://path/to/homepage",
-    "import": ...,
-    "incognito": "spanning or split",
-    "input_components": ...,
-    "key": "publicKey",
-    "minimum_chrome_version": "versionString",
-    "nacl_modules": [...],
-    "oauth2": ...,
-    "offline_enabled": true,
-    "omnibox": {
-        "keyword": "aString"
-    },
-    "optional_permissions": ...,
-    "options_page": "aFile.html",
-    "page_actions": ...,
-    "platforms": ...,
-    "plugins": [...],
-    "requirements": {...},
-    "sandbox": [...],
-    "script_badge": ...,
-    "short_name": ...,
-    "signature": ...,
-    "spellcheck": ...,
-    "storage": {
-        "managed_schema": ...
-    },
-    "system_indicator": ...,
-    "tts_engine": ...,
-    "update_url": "http://path/to/updateInfo.xml",
-    "web_accessible_resources": [...]
-*/
+     ]
 }
