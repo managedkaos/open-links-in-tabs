@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
     "name": "Open Links in Tabs",
-    "version": "2013.9",
+    "version": "2020.5",
     "author": "Managed Kaos",
-    "homepage_url": "http://managedkaos.com/open-links-in-tabs-a-chrome-extension/",
+    "homepage_url": "https://github.com/managedkaos/open-links-in-tabs",
     "description": "URLs entered in a form are opened in tabs.",
     "icons": {
         "16":  "folder-blue-16.png",
