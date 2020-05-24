@@ -10,4 +10,6 @@ We’ve developed an extension for Chrome called “Open Links in Tabs”.  Hope
 
 ## Installing
 
-[Chrome Web Store](https://chrome.google.com/webstore/detail/open-links-in-tabs/jlgojbammkhdbbohlihccohgbaccgpbm)
+Follow this link to the [Chrome Web Store](https://chrome.google.com/webstore/detail/open-links-in-tabs/jlgojbammkhdbbohlihccohgbaccgpbm) and click the "Add to Chrome" button.
+
+
