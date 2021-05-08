@@ -1,15 +1,25 @@
 <html>
     <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+
+
+        <link rel="stylesheet" href="bootstrap-4.0.0.min.css">
         <link rel="stylesheet" type="text/css" href="style.css" />
-        <script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script type="text/javascript" src="jquery-3.2.1.slim.min.js"></script>
+        <script type="text/javascript" src="popper-1.12.9.min.js"></script>
+        <script type="text/javascript" src="bootstrap-4.0.0.min.js"></script>
         <script type="text/javascript" src="popup.js"></script>
     </head>
     <body>
-        <form id="form_1">
-            <p><label for="links"><strong>Add links here...<strong></label><br />
-        	<textarea id="links_textarea" rows="6" cols="35"></textarea></p>
-            <button id="go_button">Go!</button>
-            <input id="reset_button" type="reset" value="Reset" />
-        </form>
+        <div class="d-flex p-2">
+            <form id="form_1">
+                <h5>Add links below...</h5>
+                <textarea id="links_textarea" rows="6" cols="35"></textarea></p>
+                <button id="go_button"  type="button" class="btn btn-success">Go!</button>
+                <input id="reset_button" class="btn btn-secondary mx-auto" type="reset" value="Reset">
+            </form>
+        </div>
     </body>
 </html>
