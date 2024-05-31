@@ -6,5 +6,8 @@ zip: clean
 		--exclude '*.git*' \
 		--exclude '*~*'
 
+local:
+	/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --pack-extension=$(PWD) --pack-extension-key=$(PEM_FILE)
+
 clean:
 	rm -vf open-links-in-tabs-$(VERSION).zip

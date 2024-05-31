@@ -1,7 +1,7 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Open Links in Tabs",
-    "version": "2022.1.2",
+    "version": "2024.5.29",
     "author": "Managed Kaos",
     "homepage_url": "https://github.com/managedkaos/open-links-in-tabs",
     "description": "URLs entered in a form are opened in tabs.",
@@ -10,9 +10,9 @@
         "48":  "folder-blue-48.png",
         "128": "folder-blue-128.png"
     },
-    "browser_action": {
+    "action": {
         "default_icon" : {
-            "19" : "folder-blue-16.png",
+            "16" : "folder-blue-16.png",
             "38" : "folder-blue-48.png"
         },
         "default_title": "Open Links in Tabs",
