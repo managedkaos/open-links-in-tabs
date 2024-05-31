@@ -1,9 +1,11 @@
 VERSION=$(shell grep \"version\" manifest.json  | cut -d\" -f 4)
 PACKAGE=open-links-in-tabs-$(VERSION)
 
-zip: clean
+zip:
+	rm -vf $(PACKAGE).zip
 	zip --recurse-paths $(PACKAGE).zip . \
-		--exclude './open-links-in-tabs.pem' \
+		--exclude '*.pem' \
+		--exclude '*.zip' \
 		--exclude '*.git*' \
 		--exclude '*~*'
 
@@ -20,9 +22,6 @@ pack: tar
 		--pack-extension-key=$(PEM_FILE)
 
 clean:
-	rm -rvf /tmp/$(PACKAGE)
-	rm -vf \
-		open-links-in-tabs-$(VERSION).zip \
+	rm -rvf /tmp/$(PACKAGE) \
 		/tmp/$(PACKAGE).tar \
 		/tmp/$(PACKAGE).crx
-
