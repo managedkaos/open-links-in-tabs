@@ -1,19 +1,14 @@
 VERSION=$(shell grep \"version\" manifest.json  | cut -d\" -f 4)
 PACKAGE=open-links-in-tabs-$(VERSION)
 
-zip:
-	rm -vf $(PACKAGE).zip
-	zip --recurse-paths $(PACKAGE).zip . \
-		--exclude '*.pem' \
-		--exclude '*.zip' \
-		--exclude '*.git*' \
-		--exclude '*~*'
+all: zip tar pack
 
-tar: clean
+zip tar:
+	rm -vf /tmp/$(PACKAGE).$(@)
 	git archive \
-		--format=tar \
+		--format=$(@) \
 		--prefix="$(PACKAGE)/" \
-		HEAD > /tmp/$(PACKAGE).tar
+		HEAD > /tmp/$(PACKAGE).$(@)
 
 pack: tar
 	tar -xf /tmp/$(PACKAGE).tar -C /tmp
@@ -24,4 +19,7 @@ pack: tar
 clean:
 	rm -rvf /tmp/$(PACKAGE) \
 		/tmp/$(PACKAGE).tar \
+		/tmp/$(PACKAGE).zip \
 		/tmp/$(PACKAGE).crx
+
+.PHONY: all zip tar pack clean
