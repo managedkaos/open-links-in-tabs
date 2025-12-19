@@ -1,7 +1,7 @@
 VERSION=$(shell grep \"version\" manifest.json  | cut -d\" -f 4)
 PACKAGE=open-links-in-tabs-$(VERSION)
 
-all: zip tar pack
+all: clean zip tar pack
 
 zip tar:
 	rm -vf /tmp/$(PACKAGE).$(@)

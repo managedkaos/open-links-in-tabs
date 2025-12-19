@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Open Links in Tabs",
-    "version": "2024.5.31",
+    "version": "2025.12.19",
     "author": "Managed Kaos",
     "homepage_url": "https://github.com/managedkaos/open-links-in-tabs",
     "description": "URLs entered in a form are opened in tabs.",
