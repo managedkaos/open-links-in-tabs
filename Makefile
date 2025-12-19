@@ -1,7 +1,14 @@
 VERSION=$(shell grep \"version\" manifest.json  | cut -d\" -f 4)
 PACKAGE=open-links-in-tabs-$(VERSION)
 
-all: clean zip tar pack
+all: test clean zip tar pack
+
+test:
+	cat test_urls.txt
+	npm test
+
+ci:
+	npm ci
 
 zip tar:
 	rm -vf /tmp/$(PACKAGE).$(@)
