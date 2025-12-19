@@ -22,7 +22,7 @@
 
 
 // a function to open links in tabs
-function open_links_in_tabs(){
+function open_links_in_tabs() {
 
     // links is an array containing the contents of the textarea in the form.
     // each array element is one line from the form's textarea, terminated by a newline.
@@ -33,26 +33,28 @@ function open_links_in_tabs(){
     var protocol_regex = new RegExp(/^https?:\/\//i);
 
     // a simple regex to see if the URL is valid, only checking http and https
-    // snagged from http://codegolf.stackexchange.com/questions/464   
+    // snagged from http://codegolf.stackexchange.com/questions/464
     var good_url_regex = new RegExp(/(^|\s)((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?)/gi);
 
     // process each link...
-    for ( var i = 0; i < links.length; i++ ){
+    for (var i = 0; i < links.length; i++) {
+        // trim whitespace from the link
+        links[i] = links[i].trim();
 
         // skip blank lines...
-        if (links[i].length < 1 ) continue;
+        if (links[i].length < 1) continue;
 
         // check that the link is a good URL...
-        if ( links[i].match(good_url_regex) ) {
+        if (links[i].match(good_url_regex)) {
 
-            // if the link is a good URL, but dosen't start with a protocol, 
+            // if the link is a good URL, but dosen't start with a protocol,
             // prepend it with http://
-            if ( ! links[i].match(protocol_regex) ) {
+            if (!links[i].match(protocol_regex)) {
                 links[i] = 'http://' + links[i];
             }
 
             // open the link in a tab
-            chrome.tabs.create({url:links[i]});
+            chrome.tabs.create({ url: links[i] });
 
         } else {
 

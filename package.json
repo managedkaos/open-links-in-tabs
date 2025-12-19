@@ -1,0 +1,24 @@
+{
+  "name": "open-links-in-tabs",
+  "version": "2025.12.19",
+  "description": "Open Links in Tabs: A Chrome Extension",
+  "main": "popup.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/managedkaos/open-links-in-tabs.git"
+  },
+  "keywords": ["chrome extension", "open links", "tabs"],
+  "author": "@managedkaos",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/managedkaos/open-links-in-tabs/issues"
+  },
+  "homepage": "https://github.com/managedkaos/open-links-in-tabs#readme",
+  "dependencies": {
+    "jsdom": "^27.3.0"
+  }
+}
