@@ -6,14 +6,14 @@
     "homepage_url": "https://github.com/managedkaos/open-links-in-tabs",
     "description": "URLs entered in a form are opened in tabs.",
     "icons": {
-        "16":  "folder-blue-16.png",
-        "48":  "folder-blue-48.png",
-        "128": "folder-blue-128.png"
+        "16":  "img/folder-blue-16.png",
+        "48":  "img/folder-blue-48.png",
+        "128": "img/folder-blue-128.png"
     },
     "action": {
         "default_icon" : {
-            "16" : "folder-blue-16.png",
-            "38" : "folder-blue-48.png"
+            "16" : "img/folder-blue-16.png",
+            "38" : "img/folder-blue-48.png"
         },
         "default_title": "Open Links in Tabs",
         "default_popup": "popup.html"
