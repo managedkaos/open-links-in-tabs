@@ -15,18 +15,24 @@ function createPopup(t) {
     window.chrome = { tabs: { create: ({ url }) => opened.push(url) } };
     window.eval(read('vendor/jquery-3.7.1.min.js'));
     // Initialize after JSDOM's own DOMContentLoaded to avoid duplicate listeners.
-    return new Promise((resolve) => {
-        window.document.addEventListener('DOMContentLoaded', () => {
-            window.eval(read('popup.js'));
-            window.document.dispatchEvent(new window.Event('DOMContentLoaded'));
-            resolve({
-                opened,
-                textarea: window.document.getElementById('links_textarea'),
-                go: window.document.getElementById('go_button'),
-                reset: window.document.getElementById('reset_button'),
-            });
-        }, { once: true });
-    });
+    const init = () => {
+        window.eval(read('popup.js'));
+        window.document.dispatchEvent(new window.Event('DOMContentLoaded'));
+        return {
+            opened,
+            textarea: window.document.getElementById('links_textarea'),
+            go: window.document.getElementById('go_button'),
+            reset: window.document.getElementById('reset_button'),
+        };
+    };
+
+    if (window.document.readyState === 'loading') {
+        return new Promise((resolve) => {
+            window.document.addEventListener('DOMContentLoaded', () => resolve(init()), { once: true });
+        });
+    }
+
+    return Promise.resolve(init());
 }
 
 const cases = [
