@@ -26,7 +26,9 @@ function open_links_in_tabs() {
 
     // links is an array containing the contents of the textarea in the form.
     // each array element is one line from the form's textarea, terminated by a newline.
-    var links = $('textarea').val().split('\n');
+    var links = $('textarea').val().split('\n').map(function (link) {
+        return link.trim();
+    });
 
     // a regex to see if a URL starts with a valid protocol
     // there are plenty more! I'm starting off simple with http and https
@@ -38,9 +40,6 @@ function open_links_in_tabs() {
 
     // process each link...
     for (var i = 0; i < links.length; i++) {
-        // trim whitespace from the link
-        links[i] = links[i].trim();
-
         // skip blank lines...
         if (links[i].length < 1) continue;
 
